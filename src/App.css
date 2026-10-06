@@ -11,3 +11,7 @@ h1{
   display: flex;
   gap: 4px;
 }
+.Superliste{
+  background-color: aqua;
+  size: 90px;
+}
