@@ -1,16 +1,17 @@
 import { useState } from "react";
+import styles from './App.module.css'
 
-import "./App.css";
 import Card from "./Card";
 import List from "./List.tsx";
 import Pawn from "./Pawn.tsx";
 
 function App() {
-  const [count, setCount] = useState(0);
+  
 
   return (
     <>
       <h1>Willkommen</h1>
+      <div className={styles.cardcontainer}>
       <Pawn></Pawn>
       <Pawn></Pawn>
       <List></List>
@@ -20,6 +21,7 @@ function App() {
       <Card />
       <Card />
       <Card />
+      </div>
     </>
   );
 }
