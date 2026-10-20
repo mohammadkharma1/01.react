@@ -1,17 +1,22 @@
-import React from 'react'
+import React from 'react';
 
-type Props = {}
- 
-export default function List({}: Props) {
+
+type ListProps = {
+  items: any[]; 
+  title?: string;
+};
+
+export default function List(props: ListProps) {
   return (
-    <div className='Superliste'>
-        <ol>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-        </ol>
+    <div>
+      <h2>{props.title}</h2>
+      <ol>
+        {props.items.map((item, index) => (
+          <li key={index}>
+            {item}
+          </li>
+        ))}
+      </ol>
     </div>
-  )
-  }
+  );
+}

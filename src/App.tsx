@@ -2,19 +2,29 @@ import { useState } from "react";
 import styles from "./App.module.css";
 
 import Card from "./Card";
-import List from "./List.tsx";
-import Pawn from "./Pawn.tsx";
+import List from "./List";
+import Pawn from "./Pawn";
 
 function App() {
+  // Liste von Bauern-Elementen für die Liste
+  const meineBauern = [
+    <Pawn color="white" position="a2" />,
+    <Pawn color="white" position="b2" />,
+    <Pawn color="black" position="e7" />
+  ];
+
   return (
     <>
       <h1>Willkommen</h1>
       <div className={styles.cardcontainer}>
-        <Pawn></Pawn>
-        <Pawn></Pawn>
-        <List></List>
-        <List></List>
-        <List></List>
+        {/* Einzelne Bauern mit Props */}
+        <Pawn color="white" position="a2" />
+        <Pawn color="black" position="e7" />
+
+        {/* Die Liste mit den Bauern darin */}
+        <List title="Bauern-Übersicht" items={meineBauern} />
+
+        {/* Deine ursprünglichen Card-Komponenten bleiben genau so */}
         <Card
           title="peter"
           text="Das ist Peter"
