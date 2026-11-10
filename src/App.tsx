@@ -5,7 +5,7 @@ import Card from "./Card";
 import List from "./List";
 import Pawn from "./Pawn";
 
-function App() {
+function App1() {
   // Liste von Bauern-Elementen für die Liste
   const meineBauern = [
     <Pawn color="white" position="a2" />,
@@ -44,4 +44,5 @@ function App() {
     </>
   );
 }
-
+ 
+export default App1

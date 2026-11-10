@@ -1,18 +1,21 @@
 import styles from './Card.module.css'
  
-type Props = {
-  title:string,
-  text: string
-  image: string
+ 
+interface CardProps {
+  title: string;
+  text: string;
+  image?: string;
 }
  
-export default function Card({title, text, image  }: Props) {
+function Card({ title, text, image = "https://picsum.photos/200/300" }: CardProps) {
   return (
     <div className={styles.card}>
-            <h2> {title} </h2>
-             <img src={image} alt="Hero" />
-             <p> {text} </p>
-     </div>
+      <h2>{title}</h2>
+      <img src={image} alt={title} className={styles.cardImage} />   card.tsx
+      <p>{text}</p>
+    </div>
   )
 }
+ 
+export default Card
  
