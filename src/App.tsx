@@ -58,3 +58,22 @@ export function App() {
     </>
   );
 }
+
+import "./App.css"
+import RandomWords from "random.words.tsx"
+ 
+function App () {
+  return (
+    <div className="Website">
+      <h1>Schaffst du drei Bananen gleichzeitig?</h1>
+ 
+      <div className="cardContainer">
+        <RandomWords />
+        <RandomWords />
+        <RandomWords />
+      </div>
+    </div>
+  )
+}
+ 
+export default App

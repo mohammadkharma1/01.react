@@ -9,7 +9,7 @@ const words = [
   "Hund",
   "Katze",
   "Sonne",
-  "Wolke",
+  "Maschine"
   "Stern",
 ];
 
